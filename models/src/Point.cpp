@@ -1,6 +1,14 @@
-#include "models/heders/Point.hpp"
+#include <iostream>
+#include "Point.hpp"
 
-Point::Point(double x, double y, double z) [[expects: x_is_number(x)]] {}
+Point::Point(double x, double y, double z)
+    : pointX(x), pointY(y), pointZ(z) 
+    {
+        if (!is_finite(x) || !is_finite(y) || !is_finite(z)) 
+        {
+            throw std::invalid_argument("Введены некорректные координаты");
+        }
+    }
 Point::~Point(){}
 
 double Point::getPointX() const { return this-> pointX; }
