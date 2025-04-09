@@ -3,7 +3,7 @@
 class Poligon
 {
 private:
-    std::vector<Point> points;
+    std::vector<Point> m_points;
 public:
     Poligon(std::vector<Point> *points);
     ~Poligon();
