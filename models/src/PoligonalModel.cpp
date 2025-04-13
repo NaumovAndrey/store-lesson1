@@ -1,22 +1,17 @@
-#include "PoligonalModel.hpp"
+#include "PoligonalModel.hpp"  // Включаем заголовочный файл с определением класса
 
-PoligonalModel::PoligonalModel(std::vector<Poligon> *poligon) 
-{
-    this->m_poligons = poligon;
- }
-PoligonalModel::PoligonalModel(std::vector<Poligon> *poligon, std::vector<Texture> textures) 
-{
-    this->m_poligons = poligon;
-    this->m_textures = textures;
-}
-PoligonalModel::~PoligonalModel() {}
+PoligonalModel::PoligonalModel(std::vector<std::shared_ptr<Poligon>> poligons,
+                               std::vector<std::shared_ptr<Texture>> textures)
+    : m_poligons(std::move(poligons)),
+      m_textures(std::move(textures))
+{}
 
-const std::vector<Poligon>& PoligonalModel::getPoligons() const
-{
+const std::vector<std::shared_ptr<Poligon>> PoligonalModel::getPoligons() const {
     return m_poligons;
 }
 
-const std::vector<Texture>& PoligonalModel::getTextures() const 
-{
+const std::vector<std::shared_ptr<Texture>> PoligonalModel::getTextures() const {
     return m_textures;
 }
+
+PoligonalModel::~PoligonalModel() = default;

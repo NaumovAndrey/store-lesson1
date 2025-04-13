@@ -1,11 +1,15 @@
+#pragma once
+
 #include <vector>
+#include <memory>
+#include "Point.hpp"
 
 class Poligon
 {
 private:
-    std::vector<Point> m_points;
+    std::vector<std::shared_ptr<Point>> m_points;
 public:
     Poligon();
-    Poligon(std::vector<Point> *points);
+    Poligon(std::vector<std::shared_ptr<Point>> points);
     ~Poligon();
 };

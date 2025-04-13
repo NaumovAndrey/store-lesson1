@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 
 class Texture
@@ -10,7 +12,7 @@ public:
     ~Texture();
 
     int getId();
-    std::string getName();
+    const std::string getName() const;
 
     void setName(std::string& name);
 };
