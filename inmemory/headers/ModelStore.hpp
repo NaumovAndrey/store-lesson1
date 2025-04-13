@@ -3,6 +3,7 @@
 #include <vector>
 #include <memory>
 #include <iostream>
+#include <algorithm>
 #include "PoligonalModel.hpp"
 #include "Flash.hpp"
 #include "Scene.hpp"
@@ -14,7 +15,7 @@
 class ModelStore : public IModelChangeObserver, public IModelChange
 {
 private:
-    std::vector<std::shared_ptr<IModelChangeObserver>> mod;
+    std::vector<std::weak_ptr<IModelChangeObserver>> observers;
 
     std::vector<std::shared_ptr<PoligonalModel>> models;
     std::vector<std::shared_ptr<Flash>> flashes;
@@ -47,6 +48,8 @@ public:
     int getCameraCount();
 
     void notifyChange() override;
+    void RegisterModelChanger(std::shared_ptr<IModelChangeObserver> model) override;
+    void RemoveModelChanger(std::shared_ptr<IModelChangeObserver> model) override;
 };
 
 

@@ -2,7 +2,9 @@
 
 class IModelChangeObserver {
 public:
-    virtual void notify() = 0;
+    virtual void applyUpdateModel() = 0;
 
     virtual ~IModelChangeObserver() = default;
+
+
 };
