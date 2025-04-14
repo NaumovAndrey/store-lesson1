@@ -1,7 +1,7 @@
 #pragma once
 
 #include <memory>
-
+#include "Point.hpp"
 #include "Color.hpp"
 
 class Flash
@@ -20,9 +20,9 @@ public:
     std::unique_ptr<Color> getColor();
     double getPower();
 
-    void setFlashPoint(Point point);
-    void setAngle(double angle);
+    void setFlashPoint(Point& point);
+    void setAngle(double& angle);
     void setColor(std::unique_ptr<Color> color);
-    void setPower(double power);
+    void setPower(double& power);
 
 };

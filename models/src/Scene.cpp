@@ -11,23 +11,23 @@ void Scene::addFlash(std::shared_ptr<Flash> flash)
     m_flashs.push_back(flash);
 }
 
-std::shared_ptr<PoligonalModel> getPoligonalModel(int index)
+std::shared_ptr<PoligonalModel> Scene::getPoligonalModel(int index)
 {
     return m_poligonalModels[index];
 }
 
-std::shared_ptr<Flash> getFlash(int index)
+std::shared_ptr<Flash> Scene::getFlash(int index)
 {
     return m_flashs[index];
 
 }
 
-void removePoligonalModel(int index)
+void Scene::removePoligonalModel(int index)
 {
     m_poligonalModels.erase(m_poligonalModels.begin()+index);
 }
 
-void removeFlash(int index)
+void Scene::removeFlash(int index)
 {
     m_flashs.erase(m_flashs.begin()+index);
 }

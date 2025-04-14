@@ -10,16 +10,17 @@ Flash::Flash(Point point, double angle, std::unique_ptr<Color> color, double pow
     }
 }
 
-Point::getFlashPoint()
-{
-    return this->m_flashPoint
-}
-
-void Flash::setFlashPoint(Point point){
+void Flash::setFlashPoint(Point& point){
     this->m_flashPoint = point;
 }
 
-double Flash::getAngle(){
+Point Flash::getFlashPoint()
+{
+    return this->m_flashPoint;
+}
+
+double Flash::getAngle()
+{
     return this->m_angle;
 }
 
@@ -32,13 +33,13 @@ double Flash::getPower(){
 }
 
 void Flash::setPower(double& power){
-    this->m_power = power
+    this->m_power = power;
 }
 
-std::unique_ptr<Color> Flash::getColor(){
-    return this->m_color;
+std::unique_ptr<Color> Flash::getColor() {
+    return std::move(this->m_color);
 }
 
-void Flash::setColor(std::unique_ptr<Color> color){
-    this->m_color = color
+void Flash::setColor(std::unique_ptr<Color> color) {
+    this->m_color = std::move(color);
 }

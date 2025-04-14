@@ -7,8 +7,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Добавляем все исходники
 add_executable(store3d
     main.cpp
+    models/src/Camera.cpp
+    models/src/Color.cpp
+    models/src/Flash.cpp
     models/src/Point.cpp
     models/src/Poligon.cpp
+    models/src/Scene.cpp
     models/src/Texture.cpp
     models/src/PoligonalModel.cpp
     inmemory/src/ModelStore.cpp

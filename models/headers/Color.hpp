@@ -1,3 +1,4 @@
+#pragma once
 class Color
 {
 private:
@@ -5,11 +6,11 @@ private:
     int m_g;
     int m_b;
 public:
-    Color(int r, int g, int g);
+    Color(int r, int g, int b);
     ~Color() = default;
 
     void setColor(int r, int g, int b);
-    int getColor();
+    Color getColor();;
 
     int getColorR() const;
     int getColorG() const;
@@ -18,4 +19,6 @@ public:
     void setColorR(int r);
     void setColorG(int g);
     void setColorB(int b);
+
+    friend std::ostream& operator<<(std::ostream &out, const Color &c);
 };
