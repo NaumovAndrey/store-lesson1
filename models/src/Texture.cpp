@@ -5,8 +5,5 @@ Texture::~Texture() {}
 
 int Texture::getId() { return m_id; }
 
-void Texture::setName(std::string &name)
-{
-    m_name = name;
-}
+void Texture::setName(const std::string& name) { m_name = name; }
 

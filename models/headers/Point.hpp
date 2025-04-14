@@ -3,7 +3,7 @@
 #include <iosfwd>
 #include <ostream>
 
-#include "contracts.h"
+#include "contracts.hpp"
 
 class Point
 {

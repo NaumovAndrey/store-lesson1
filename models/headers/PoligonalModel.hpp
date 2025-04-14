@@ -16,6 +16,6 @@ public:
 
     ~PoligonalModel() = default;
 
-    const std::vector<std::shared_ptr<Poligon>> getPoligons() const { return m_poligons; }
-    const std::vector<std::shared_ptr<Texture>> getTextures() const { return m_textures; }
+    const std::vector<std::shared_ptr<Poligon>> getPoligons() const;
+    const std::vector<std::shared_ptr<Texture>> getTextures() const;
 };

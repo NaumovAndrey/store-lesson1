@@ -5,14 +5,6 @@ class Flash
 private:
     
 public:
-    Flash();
-    ~Flash();
+    Flash() = default;
+    ~Flash() = default;
 };
-
-Flash::Flash()
-{
-}
-
-Flash::~Flash()
-{
-}

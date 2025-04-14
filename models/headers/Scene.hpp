@@ -5,14 +5,6 @@ class Scene
 private:
     
 public:
-    Scene();
-    ~Scene();
+    Scene() = default;
+    ~Scene() = default;
 };
-
-Scene::Scene()
-{
-}
-
-Scene::~Scene()
-{
-}

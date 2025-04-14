@@ -1,23 +1,11 @@
 #include "IModelChangeObserver.hpp"
 
-class Observer2
+class Observer2 : public IModelChangeObserver
 {
-private:
-    
 public:
     Observer2();
     ~Observer2();
 
-    void applyUpdateModel() @override
-    {
-        std::cout << "update model in Observer2" << std::endl;
-    }
+    void applyUpdateModel() override;
+    void onModelChanged(ModelStore* store) override;
 };
-
-Observer2::Observer2()
-{
-}
-
-Observer2::~Observer2()
-{
-}

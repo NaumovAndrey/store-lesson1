@@ -10,8 +10,10 @@ add_executable(store3d
     models/src/Point.cpp
     models/src/Poligon.cpp
     models/src/Texture.cpp
+    models/src/PoligonalModel.cpp
     inmemory/src/ModelStore.cpp
-    
+    inmemory/src/Observer1.cpp
+    inmemory/src/Observer2.cpp
 )
 
 # Указываем путь к заголовкам

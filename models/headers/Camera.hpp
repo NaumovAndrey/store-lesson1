@@ -5,14 +5,6 @@ class Camera
 private:
     
 public:
-    Camera();
-    ~Camera();
+    Camera() = default;
+    ~Camera() = default;
 };
-
-Camera::Camera()
-{
-}
-
-Camera::~Camera()
-{
-}

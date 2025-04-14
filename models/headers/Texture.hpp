@@ -14,5 +14,5 @@ public:
     int getId();
     const std::string getName() const;
 
-    void setName(std::string& name);
+    void setName(const std::string& name);
 };

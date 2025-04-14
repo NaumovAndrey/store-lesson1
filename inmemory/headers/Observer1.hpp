@@ -1,25 +1,11 @@
 #include "IModelChangeObserver.hpp"
 
-class Observer1
+class Observer1 : public IModelChangeObserver
 {
-private:
-    
 public:
     Observer1();
     ~Observer1();
 
-    void applyUpdateModel() @override
-    {
-        std::cout << "Добавленна новая полигональная модель - observer1" << std::endl;
-    }
+    void applyUpdateModel() override;
+    void onModelChanged(ModelStore* store) override;
 };
-
-
-Observer1::Observer1()
-{
-}
-
-Observer1::~Observer1()
-{
-}
-
